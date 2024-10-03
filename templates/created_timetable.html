@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+  <h1>Created Timetable</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Time</th>
+        <th>Activity Type</th>
+        <th>Course</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for course in selected_courses %}
+        <tr>
+          <td>{{ course["day"] }}</td>            
+          <td>{{ course["time"] }}</td>           
+          <td>{{ course["activity_type"] }}</td>  
+          <td>{{ course["course"] }}</td>         
+          <td>{{ course["location"] }}</td>       
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

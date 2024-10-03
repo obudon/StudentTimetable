@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+  <h1>Timetable</h1>
+  <p>Welcome to your timetable, {{ session['user_id'] }}!</p>
+  
+  <form action="" method="post" novalidate>
+    <button type="submit" name="create_timetable">Create Timetable</button>
+    <button type="submit" name="show_timetable">Show Timetable</button>
+  </form>
+{% endblock %}

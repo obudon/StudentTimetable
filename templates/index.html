@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <h1>Welcome to your timetable!</h1>
+    <p>
+        Please <a href="{{ url_for('register') }}">register</a> or 
+        <a href="{{ url_for('login') }}">login</a> to access your
+        <a href="{{ url_for('timetable')}}">timetable.</a>
+        <p>{{selected_courses}}</p>
+    </p>
+
+{% endblock %}

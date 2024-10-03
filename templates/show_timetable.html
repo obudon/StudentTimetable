@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<h1>{{ session['user_id'] }}, sorry. Unfortunately your timetable is not here yet</h1>
+
+<button type="submit" name="create_timetable"><a href="{{ url_for('timetable')}}">Back</a></button>
+{%endblock%}

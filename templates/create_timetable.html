@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+  <h1>Create Timetable</h1>
+
+  <form method="POST" action="{{ url_for('created_timetable') }}">
+    {{ form.hidden_tag() }}
+    <section>
+      {{ form.course.label }}
+      {% for value, label, checked in form.course.iter_choices() %}
+        <div class="check">
+          <input class="form-check-input" type="checkbox" name="{{ form.course.name }}" value="{{ value }}" 
+          {% if checked %}
+          {{checked}}
+          {% endif %}>
+          <label class="form-check-label">
+            {{ label }}
+        </label>
+        </div>
+      {% endfor %}
+    </section>
+    <section>
+      {{ form.submit() }}
+    </section>
+  </form>
+
+  
+{% endblock %}
